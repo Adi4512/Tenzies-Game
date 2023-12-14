@@ -1,0 +1,159 @@
+* {
+     box-sizing: border-box;
+}
+
+body{
+    background-color: #0B2434;
+    margin: 0;
+    padding:120px;
+    padding-left:360px ;
+    font-family:'Karla',sans-serif;
+    font-weight: 700;
+
+    
+   
+}
+.title{
+    font-size: 3rem;
+     /* Create a conic gradient. */
+  /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
+  background: #CA4246;
+  background-color: #CA4246;
+  background: conic-gradient(
+    #CA4246 16.666%, 
+    #E16541 16.666%, 
+    #E16541 33.333%, 
+    #F18F43 33.333%, 
+    #F18F43 50%, 
+    #8B9862 50%, 
+    #8B9862 66.666%, 
+    #476098 66.666%, 
+    #476098 83.333%, 
+    #A7489B 83.333%);
+  
+  /* Set thee background size and repeat properties. */
+  background-size: 57%;
+  background-repeat: repeat;
+  
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: rainbow-text-animation-rev 0.5s ease forwards;
+
+  cursor: pointer;
+}
+
+/* Add animation on hover. */
+.title:hover {
+  animation: rainbow-text-animation 0.5s ease forwards;
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-animation {
+  0% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-animation-rev {
+  0% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+}
+
+.instructions{
+  font-size: 1.1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+
+}
+
+main{
+    background: #F5F5F5;
+     max-width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family:'Karla',sans-serif;
+    font-weight: 700;
+
+   
+}
+
+.die--box{
+    width: 60px;
+   height: 60px;
+   border-radius: 7px;
+   background-color: #ffffff;
+   box-shadow: 0px 2px 2px 0px #00000026;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+ 
+
+     
+}
+.die--container{
+    display: grid;
+    grid-template: auto auto / repeat(5,1fr);
+    gap: 30px;
+
+}
+.die--num{
+    font-size: 2rem;
+}
+
+.roll--button{
+    width: 100px;
+    height: 45px;
+    background: #5035FF;
+    box-shadow: 0px 3.1999998092651367px 7.679999828338623px 0px #0000002E;
+    border: none;
+    color:#ffffff;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family:'Karla',sans-serif;
+    font-weight: 700;
+    margin-bottom: 85px;
+    margin-top: 20px;
+
+}
+.roll--button:focus{
+    outline: none;
+}
+
+.roll--button:active{
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0,0, 0.7);
+}
